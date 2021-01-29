@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  height:20px;
-  line-height:0px;
-  text-align: left;
-}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.accordion {
+			background-color: #eee;
+			color: #444;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			outline: none;
+			font-size: 1.2vw;
+			transition: 0.4s;
+			line-height: 0px;
+			text-align: left;
+		}
 
-.active, .accordion:hover {
-  background-color:rgb(146, 146, 252);
-}
+		.active,
+		.accordion:hover {
+			background-color: rgb(146, 146, 252);
+		}
 
-.panel {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-</style>
+		.panel {
+			padding: 0 18px;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+			background-color: lightgray
+		}
+	</style>
 </head>
+
 <body>
 
-<button class="accordion">Newspaper Clips</button>
-<div class="panel">
-  <p><a href="">Clip 1</a></p>
-  <p><a href="">Clip 2</a></p>
-  <p><a href="">Clip 3</a></p>
-  <p><a href="">View All</a></p>
-</div>
+	<button class="accordion">Publications</button>
+	<div class="panel">
+		<p><a href="../../cgi-bin/koha/pages.pl?p=bibliography">Bibliography</a></p>
+		<p><a href="/cgi-bin/koha/pages.pl?p=tableofcontents">Table of Contents</a></p>
+		<p><a href="/cgi-bin/koha/pages.pl?p=documents">Documentation List</a></p>
+	</div>
 
-<button class="accordion">Forms</button>
-<div class="panel">
-  <p><a href="">Form 1</a></p>
-  <p><a href="">Form 2</a></p>
-  <p><a href="">Form 3</a></p>
-  <p><a href="">View All</a></p>
-</div>
+	<button class="accordion">Forms</button>
+	<div class="panel">
+		<p><a href="/Forms/Book%20Recommendation%20Proforma.pdf">Book Recommendation Proforma</a></p>
+		<p><a href="/Forms/Library%20Duplicate%20Card%20Form.pdf">Library Duplicate Card</a></p>
+		<p><a href="/Forms/NLIST%20Remote%20Access%20Form.pdf">NLIST Remote Access Form</a></p>
+		<p><a href="/Forms/Proforma%20for%20Book%20Replacement%20Cost%20Deposit.pdf">Book Replacement Cost Deposit</a>
+		</p>
+	</div>
 
+	<!--
 <button class="accordion">Annual Reports</button>
 <div class="panel">
   <p><a href="">Report 1</a></p>
@@ -56,22 +60,31 @@
   <p><a href="">View All</a></p>
 </div>
 
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+  
+<button class="accordion">E-Books</button>
+<div class="panel">
+  <p><a href="/Ebooks/1st%20semester%20books">Semester 1</a></p>
+  <p><a href="/Ebooks/4th%20semester%20Books">Semester 4</a></p>
+</div>
+-->
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-</script>
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight) {
+					panel.style.maxHeight = null;
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				}
+			});
+		}
+	</script>
 
 </body>
+
 </html>
