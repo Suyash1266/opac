@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        .accordion1 {
+        .ebooks .accordion1 {
             cursor: pointer;
             padding: 18px;
             width: 100%;
@@ -16,24 +16,24 @@
             background-color: white;
         }
 
-        .active,
-        .accordion1:hover {
+        .ebooks .active,
+        .ebooks .accordion1:hover {
             background-color: #ccc;
             font-weight: bold;
         }
 
-        .accordion1:after {
+        .ebooks .accordion1:after {
             content: '\002B';
             font-weight: bold;
             float: right;
             margin-left: 5px;
         }
 
-        .active:after {
+        .ebooks .active:after {
             content: "\2212";
         }
 
-        .panel1 {
+        .ebooks .panel1 {
             padding: 0 18px;
             background-color: white;
             max-height: 0;
@@ -43,7 +43,7 @@
     </style>
 </head>
 
-<body>
+<body class='ebooks'>
     <h1>E - Books</h1>
     <button class="accordion1">B.A. (H) English</button>
     <div class="panel1">
