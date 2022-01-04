@@ -15,7 +15,7 @@ def encodeToUrl(s):
 
 # the relative path to be used in KOHA
 relativePath = encodeToUrl(input("Enter the relative path: "))
-book = '<li><a href="{2}{0}">{1}</a></li>'
+book = '<li><a href="{2}\{0}">{1}</a></li>'
 html = ""
 
 # for each file: get the file name and create its HTML
